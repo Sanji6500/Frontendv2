@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashborad/Dashboard";
+import { FatherAndSonKamahamihaaaa } from "./components/FatherAndSonKamahamihaaaa";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <FatherAndSonKamahamihaaaa />
+
+      <div className="  ease-in-out duration-300   md:pl-[210px] h-full   pt-[65px]    ">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
