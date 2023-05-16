@@ -92,8 +92,8 @@ export const Statisticscard = ({
 
 export const BigStatisticsCard = () => {
   return (
-    <div className=" w-full  sm:max-w-lg px-3  max-h-[300px]  py-4 bg-white border-[1px] shadow-customMedium  ">
-      <div className="flex items-center justify-between mb-8">
+    <div className=" w-full  sm:max-w-lg px-3  max-h-[550px]  py-4 bg-white border-[1px] shadow-customMedium  ">
+      <div className="flex items-center justify-between mb-12 ">
         <h5 className=" text-custom-apple-color  text-[16px] font-extrabold  font-LexendDeca leading-none">
           Upcoming Ads
         </h5>
@@ -119,7 +119,7 @@ export const BigStatisticsCard = () => {
           Stauts
         </p>
       </div>
-      <div className=" bg-black/10  h-[1px]  w-[calc(97%)]"></div>
+      <div className=" bg-black/10  h-[1px]  w-[calc(97%)] "></div>
       {DataUpcoming.slice(0, 3).map((Data, index) => (
         <React.Fragment key={Data.ProductName}>
           <div className=" flex justify-between items-center  py-4 ">
@@ -136,7 +136,7 @@ export const BigStatisticsCard = () => {
               Stauts
             </p>
           </div>
-          <div className=" bg-black/10  h-[1px]  w-[calc(97%)]"></div>
+          {index !== 2 ?  (<div className=" bg-black/10  h-[1px]  w-[calc(97%)]"></div>):null  } 
           {/* {index < 3 &&(   <div className=" bg-black/10  h-[1px]  w-[calc(97%)]"></div>) : null} */}
         </React.Fragment>
       ))}
