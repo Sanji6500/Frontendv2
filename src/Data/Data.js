@@ -68,6 +68,10 @@ export const MainCategory = [
   {
     Unit: "kg",
   },
+  
+  {
+    Unit: "mg",
+  },
 ];
 
 export const Unit = [
